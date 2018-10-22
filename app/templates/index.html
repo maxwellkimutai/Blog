@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+<!-- Content block -->
+{%block content%}
+<div class="container" style="padding-bottom: 20px;">
+
+</div>
+<div class="container">
+    <h1>Recent posts</h1>
+    <a href="/subscribe/{{current_user.id}}" class="btn btn-success">Subscribe</a>
+    <hr>
+    {{macro.displayPosts(posts)}}
+</div>
+{%endblock%}
